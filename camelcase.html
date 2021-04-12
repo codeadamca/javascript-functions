@@ -9,18 +9,26 @@
 
     <script>
 
+    // Define the camelcase function
     function toCamelCase(textToConvert)
     {
 
+        // Split the text into an array of words
         var words = textToConvert.split(" ");
+
+        // Create a variable to store the final string
         var newString = "";
 
+        // Loop through words
         for(var i = 0; i < words.length; i ++)
         {
+            // The first word is lowercase
             if(i == 0) 
             {
                 newString += words[i];
             }
+
+            // Every other word has the first letter capitalized
             else
             {
                 newString += words[i].substr(0, 1).toUpperCase();
@@ -28,10 +36,12 @@
             }
         }
 
+        // Return the final string
         return newString;
 
     }
 
+    // Test the function
     document.write(toCamelCase("et luctus lacus maximus"));    
 
     </script>

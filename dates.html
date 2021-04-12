@@ -9,54 +9,73 @@
 
     <script>
 
+    // Define the ago function
     function ago(date) {
-
+        
+        // Calculate the number of secods different
         var seconds = Math.floor((new Date() - date) / 1000);
+
+        // Create a variable to store the final string
         var agoString = "";
 
+        // This function does not yet account for future dates
         if(seconds < 0)
         {
             return "In the Future";
         }
+
+        // Display date in years
         if(seconds > 31536000)
         {
             var years = Math.floor(seconds / 31536000);
             agoString += years + " Year";
             if(years > 1) agoString += "s";
         }
+
+        // Display date in months
         else if(seconds > 2592000)
         {
             var months = Math.floor(seconds / 2592000);
             agoString += months + " Month";
             if(months > 1) agoString += "s";
         }
+
+        // Display date in days
         else if(seconds > 86400)
         {
             var days = Math.floor(seconds / 86400);
             agoString += days + " Day";
             if(days > 1) agoString += "s";
         }
+
+        // Display date in hours
         else if(seconds > 3600)
         {
             var hours = Math.floor(seconds / 3600);
             agoString += hours + " Hour";
             if(hours > 1) agoString += "s";
         }
+
+        // Display date in minutes
         else if(seconds > 60)
         {
             var minutes = Math.floor(seconds / 50);
             agoString += minutes + " Minutes";
             if(minutes > 1) agoString += "s";
         }
+
+        // Date is recent
         else 
         {
             return "Just Now";
         }
 
+        // Return the final string
         return agoString += " Ago";
 
     }
 
+    // Test the function
     document.write(ago(new Date(2022, 3, 12, 10, 30)));
 
     </script>

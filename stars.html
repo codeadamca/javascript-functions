@@ -9,13 +9,17 @@
 
     <script>
 
+    // Define the stars function
     function stars(rating, total)
     {
 
+        // Start the HTML string
         var starString = "<div>";
 
+        // Repeat based on the total value
         for( var i = 0; i < total; i ++)
         {
+            // Add a full or empty star based on rating
             if(i < rating)
             {
                 starString += "&#9733;";
@@ -26,16 +30,17 @@
             }
         }
 
+        // End the srting
         starString += "</div>";
 
+        // Return the final string
         return starString;
 
     }
 
+    // Test the function
     document.write(stars(3, 5));
-
     document.write(stars(8, 10));
-
     document.write(stars(3, 10));
     
     </script>
