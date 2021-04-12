@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+    <title>JavaScript Date Ago Function</title>
+</head>
+<body>
+
+    <h1>JavaScript Date Ago Function</h1>
+
+    <script>
+
+    function ago(date) {
+
+        var seconds = Math.floor((new Date() - date) / 1000);
+        var agoString = "";
+
+        if(seconds < 0)
+        {
+            return "In the Future";
+        }
+        if(seconds > 31536000)
+        {
+            var years = Math.floor(seconds / 31536000);
+            agoString += years + " Year";
+            if(years > 1) agoString += "s";
+        }
+        else if(seconds > 2592000)
+        {
+            var months = Math.floor(seconds / 2592000);
+            agoString += months + " Month";
+            if(months > 1) agoString += "s";
+        }
+        else if(seconds > 86400)
+        {
+            var days = Math.floor(seconds / 86400);
+            agoString += days + " Day";
+            if(days > 1) agoString += "s";
+        }
+        else if(seconds > 3600)
+        {
+            var hours = Math.floor(seconds / 3600);
+            agoString += hours + " Hour";
+            if(hours > 1) agoString += "s";
+        }
+        else if(seconds > 60)
+        {
+            var minutes = Math.floor(seconds / 50);
+            agoString += minutes + " Minutes";
+            if(minutes > 1) agoString += "s";
+        }
+        else 
+        {
+            return "Just Now";
+        }
+
+        return agoString += " Ago";
+
+    }
+
+    document.write(ago(new Date(2022, 3, 12, 10, 30)));
+
+    </script>
+
+</body>
+</html>
