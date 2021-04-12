@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+    <title>JavaScript Stars Function</title>
+</head>
+<body>
+
+    <h1>JavaScript Stars Function</h1>
+
+    <script>
+
+    function stars(rating, total)
+    {
+
+        var starString = "<div>";
+
+        for( var i = 0; i < total; i ++)
+        {
+            if(i < rating)
+            {
+                starString += "&#9733;";
+            }
+            else
+            {
+                starString += "&#9734;";
+            }
+        }
+
+        starString += "</div>";
+
+        return starString;
+
+    }
+
+    document.write(stars(3, 5));
+
+    document.write(stars(8, 10));
+
+    document.write(stars(3, 10));
+    
+    </script>
+
+</body>
+</html>
