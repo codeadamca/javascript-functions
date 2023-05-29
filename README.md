@@ -1,4 +1,4 @@
-# A Basic Introduction to JavaScript and Functions
+# Introduction to JavaScript and Functions
 
 A series of basic custom JavaScript functions.
 
