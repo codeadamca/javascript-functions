@@ -2,6 +2,8 @@
 
 A series of basic custom JavaScript functions.
 
+***
+
 ## Tutorial Requirements:
 
 * [Visual Studio Code](https://code.visualstudio.com/) or [Brackets](http://brackets.io/) (or any code editor)
